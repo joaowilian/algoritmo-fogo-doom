@@ -4,39 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOGO-DOOM</title>
-    <style>
-        table{/*coloca ma borda na tablea*/
-            border-collapse: collapse;
-            border: 1px solid #000;            
-        }
-        td{
-            width: 50px;
-            height: 50px;
-            border: 1px solid #000;
-            text-align: center;
-            vertical-align: center;
-            font-family: monospace;
-            font-size: 18px;
-            position: relative;
-        }
-        .pixel-index{
-            font-size: 10px;
-            display: inline-block;
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            color: rgb(136, 135, 135);
-        }
-        td.pixel{
-            width: 4px;
-            height: 4px;
-            border: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
+   
 </head>
 <body>
-    <div id="fogoCanvas"></div>
-    <script src="fogo.js"></script>
-    testando fogo doom
+    <section>
+        <div id="fogoCanvas"></div>        
+        <script src="fogo.js"></script>
+        <div>
+            <input type="range" min="0" max="36" step="1"  value="36"
+                class="slider" id="rangeBarra" onchange="barra()">            
+            
+                <p> Quant. de Cores Usada:<br><span id="demo">36</span></p>         
+        </div>
+    </section>
+    <script>
+        
+
+       
+    </script>
 </body>
+    
 </html>
