@@ -21,9 +21,7 @@ function barra(){
         
 
     }
-    criandoOrigemDoFogo()
-
-    
+    criandoOrigemDoFogo()    
 }
 
 
@@ -35,8 +33,6 @@ function inicial(){
   
 
     setInterval(calculaPropagacaoFogo,50) // loop infinito
-
-    
 
 }
 
@@ -79,8 +75,7 @@ function calculaPropagacaoFogo(){
         for(let linha = 0;linha < alturaDoFogo;linha++){
             const pixelindice = coluna + ( larguraDoFogo * linha )
 
-            atualizaIntencidadeDoFogo(pixelindice)
-            
+            atualizaIntencidadeDoFogo(pixelindice)            
             
         }
     }
