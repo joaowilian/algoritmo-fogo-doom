@@ -17,7 +17,7 @@ function barra(){
 
        alteraAltura = output.innerHTML
     
-        console.log(alteraAltura,'alterar autura')
+        //console.log(alteraAltura,'alterar autura')
         
 
     }
@@ -31,14 +31,12 @@ function inicial(){
     criandoOrigemDoFogo()
     renderizaFogo()   
   
-
     setInterval(calculaPropagacaoFogo,50) // loop infinito
-
 }
 
 function calculaEstruturaDados(){
     const numeroDePixel = larguraDoFogo * alturaDoFogo //multiplicando a largura e altura encontra todos os pixel do fogo
-    //console.log(numeroDePixel,'quantiadade de pixel criada')
+    //console.log(numeroDePixel,'quantidade de pixel criada')
    
     for (let i = 0 ; i < numeroDePixel ; i++ ){
         fogoPixelArray[i] = 0 //incrementa 0 em todos os indices do array, pq a intencidade do fogo e 0 
@@ -55,16 +53,14 @@ function atualizaIntencidadeDoFogo(pixelAtual){
     //calcular o enfraquecimento da intencidade do fogo
     const decair = Math.floor(Math.random() * 3) // gera fogo numeros aleatorios    
     //const decair = 1 // gera fogo com todas as colunas iguais
-
-    
-   
+     
     const intencidadePixeDeBaixo =  fogoPixelArray[indeceDoPixelAbaixo]
     const novaIntencidadeDoFogo = 
         intencidadePixeDeBaixo - decair >= 0 ? intencidadePixeDeBaixo - decair : 0
 
     //fogoPixelArray[pixelAtual] = novaIntencidadeDoFogo // fogo reto pra cima
 
-    // para fazer como se tivesse vento no fogo o pixel atualiza o pixel ao lado 
+    // para fazer como se tivesse vento no fogo, o pixel atual atualiza o pixel ao lado 
     fogoPixelArray[pixelAtual - decair] = novaIntencidadeDoFogo // fogo para lado esquerdo
     //fogoPixelArray[pixelAtual + decair] = novaIntencidadeDoFogo // fogo para lado direito
     
@@ -140,8 +136,8 @@ function criandoOrigemDoFogo(){
     }
 
 /*
- Canto superio direito e o indece do ARRAY
- numero no centro e a intensidade do fogo
+ Canto superior direito esta o índice do ARRAY
+ número no centro esta intensidade do fogo
  _______ _______ _______       _______
 |      0|      1|      2|     |      9|
 |   0   |   0   |   0   | ... |   0   | 
